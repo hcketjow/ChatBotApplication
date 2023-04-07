@@ -2,3 +2,4 @@
 # pip install chatterbot-corpus
 # pip install PyYAML
 # pip install ChatterBot
+# pip install fontawesomefree
