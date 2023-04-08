@@ -4,6 +4,15 @@ from chatterbot.trainers import ListTrainer
 import json
 from chatterbot.trainers import ListTrainer
 from .models import Conversation
+import nltk
+import ssl
+
+try:
+    _create_unverified_https_context = ssl._create_unverified_context
+except AttributeError:
+    pass
+else:
+    ssl._create_default_https_context = _create_unverified_https_context
 
 with open('data.json') as file:
     data = json.load(file)
@@ -20,6 +29,8 @@ bot = ChatBot('chatbot', read_only=False)
 trainer = ListTrainer(bot)
 trainer.train(patterns)
 trainer.train(responses)
+
+nltk.download()
 
 
 def main(request):

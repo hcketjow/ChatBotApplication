@@ -3,3 +3,5 @@
 # pip install PyYAML
 # pip install ChatterBot
 # pip install fontawesomefree
+# pip install nltk
+# pip install ssl
